@@ -1,8 +1,9 @@
 name: Ahmed Osama 
 bio: Hello
 
-external-image: False
+external-image: false
 picture: assets/images/osama.jpg
+
 
 resume: false
 resume-external: false
