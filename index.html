@@ -11,22 +11,41 @@ title: Home
   <title>{{ page.title }} | Ahmed Osama</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Press Start 2P', cursive;
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
       overflow-x: hidden;
+      transition: background 1s ease;
     }
     header {
       text-align: center;
       padding: 4rem 1rem;
       background: #1a1a2e;
+      animation: slideFade 1s ease-out;
+    }
+    @keyframes slideFade {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     header img {
       width: 120px;
       border-radius: 50%;
       border: 4px solid #fff;
+      transition: transform 0.3s ease;
+    }
+    header img:hover {
+      transform: rotate(360deg);
     }
     h1 {
       margin: 1rem 0 0.5rem;
@@ -40,6 +59,11 @@ title: Home
       padding: 2rem;
       max-width: 900px;
       margin: 0 auto;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
     .section h2 {
       border-bottom: 2px solid #ff4081;
@@ -51,11 +75,25 @@ title: Home
       background: #222;
       padding: 1rem;
       border-radius: 16px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     .card h3 {
       color: #ffee58;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery video, .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
     footer {
       text-align: center;
@@ -89,6 +127,16 @@ title: Home
       <a href="/blog">Blog</a>
     </p>
   </header>
+
+  <section class="section">
+    <h2>🎬 Project Gallery</h2>
+    <div class="gallery">
+      <video src="assets/videos/vr-car.mp4" autoplay loop muted></video>
+      <img src="assets/images/bakkar.gif" alt="2D Platformer">
+      <video src="assets/videos/moonknight.mp4" autoplay loop muted></video>
+      <img src="assets/images/ar-game.gif" alt="AR Vuforia Game">
+    </div>
+  </section>
 
   <section class="section">
     <h2>🕹️ Projects</h2>
