@@ -1,9 +1,14 @@
+---
+layout: default
+title: Home
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed Osama | Game Developer</title>
+  <title>{{ page.title }} | Ahmed Osama</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
@@ -87,7 +92,6 @@
 
   <section class="section">
     <h2>🕹️ Projects</h2>
-
     <div class="card">
       <h3>Luxoft VR Automotive Project</h3>
       <p>Immersive VR modules to inspect & customize cars. Real-time feature customization using modular systems.</p>
@@ -95,14 +99,12 @@
       <div class="tag">VR</div>
       <div class="tag">XR</div>
     </div>
-
     <div class="card">
       <h3>2D Platformer (Bakkar)</h3>
       <p>Classic Egyptian adventure platformer. Built with Unity, featuring level design, scripting, and animation.</p>
       <div class="tag">Unity</div>
       <div class="tag">Platformer</div>
     </div>
-
     <div class="card">
       <h3>MoonKnight Shooter</h3>
       <p>3D Unreal Engine game using Blueprints & C++ where the knight shoots enemies using magical abilities.</p>
@@ -110,7 +112,6 @@
       <div class="tag">Blueprints</div>
       <div class="tag">C++</div>
     </div>
-
     <div class="card">
       <h3>AR Game using Vuforia</h3>
       <p>Augmented reality experience integrating Vuforia for dynamic 3D content over real-world markers.</p>
@@ -121,7 +122,6 @@
 
   <section class="section">
     <h2>🎮 Experience</h2>
-
     <div class="card">
       <h3>iSchool Inc — Coding Instructor (2023 - Present)</h3>
       <p>Taught and developed 2D games with Godot: side-scrollers, endless runners, AI, and animation systems.</p>
@@ -138,8 +138,21 @@
     </p>
   </section>
 
+  <section class="section">
+    <h2>📝 Latest Blog Posts</h2>
+    <ul>
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <small> - {{ post.date | date: "%B %d, %Y" }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+    <p><a href="/blog">Read all posts →</a></p>
+  </section>
+
   <footer>
-    &copy; Ahmed Osama 2025 | Built with ❤️ for games
+    &copy; Ahmed Osama 2025 | Built with ❤️ for games | Powered by Jekyll
   </footer>
 </body>
 </html>

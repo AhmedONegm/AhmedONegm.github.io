@@ -24,6 +24,8 @@ authors:
 width: normal
 
 blog: true
+paginate: 5
+paginate_path: "blog/page:num"
 read-time: true
 show-tags: true
 related: true
