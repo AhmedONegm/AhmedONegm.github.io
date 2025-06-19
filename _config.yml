@@ -1,0 +1,49 @@
+name: Ahmed Osama 
+bio: Hello
+
+external-image: False
+picture: assets/images/osama.jpg
+
+resume: false
+resume-external: false
+
+url: http://ahmedonegm.github.io
+
+permalink: /:title/
+
+github: AhmedONegm
+email: ahmedosamam.negm@gmail.com
+
+authors:
+    ahmedosama:
+        name: Ahmed Osama
+        bio: Hello
+        external-image: false
+        picture: assets/images/osama.jpg
+
+width: normal
+
+blog: true
+read-time: true
+show-tags: true
+related: true
+show-author: true
+animation: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-admin
+
+jekyll-mentions:
+    base_url: https://github.com
+
+compress_html:
+    ignore:
+        envs:
+        - development
+        - stage
+
+exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
