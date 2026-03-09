@@ -1,205 +1,319 @@
----
-layout: default
-title: Home
----
-
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }} | Ahmed Osama</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Ahmed Osama | Indie Game Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
     * {
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
+
     body {
-      margin: 0;
-      font-family: 'Press Start 2P', cursive;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      overflow-x: hidden;
-      transition: background 1s ease;
+        margin: 0;
+        font-family: 'Press Start 2P', cursive;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: #fff;
+        overflow-x: hidden;
     }
+
     header {
-      text-align: center;
-      padding: 4rem 1rem;
-      background: #1a1a2e;
-      animation: slideFade 1s ease-out;
+        text-align: center;
+        padding: 4rem 1rem;
+        background: #1a1a2e;
     }
-    @keyframes slideFade {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+
     header img {
-      width: 120px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      transition: transform 0.3s ease;
+        width: 120px;
+        border-radius: 50%;
+        border: 4px solid white;
+        transition: 0.3s;
     }
+
     header img:hover {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
+
     h1 {
-      margin: 1rem 0 0.5rem;
-      font-size: 1.5rem;
+        margin: 1rem 0 0.5rem;
+        font-size: 1.5rem;
     }
-    p.bio {
-      font-size: 0.8rem;
-      color: #aaa;
+
+    .bio {
+        font-size: 0.8rem;
+        color: #aaa;
     }
+
     .section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      animation: fadeIn 1s ease;
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
+
     .section h2 {
-      border-bottom: 2px solid #ff4081;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #ff4081;
+        border-bottom: 2px solid #ff4081;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        color: #ff4081;
     }
+
     .card {
-      background: #222;
-      padding: 1rem;
-      border-radius: 16px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
-      transition: transform 0.3s ease;
+        background: #222;
+        padding: 1rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 0 10px rgba(255, 64, 129, .3);
+        transition: 0.3s;
     }
+
     .card:hover {
-      transform: scale(1.03);
+        transform: scale(1.03);
     }
+
     .card h3 {
-      color: #ffee58;
+        color: #ffee58;
     }
+
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
     }
-    .gallery video, .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
+    .gallery video,
+    .gallery img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, .1);
     }
+
+    .card video {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
     footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.7rem;
-      background: #111;
+        text-align: center;
+        padding: 1rem;
+        font-size: .7rem;
+        background: #111;
     }
+
     a {
-      color: #ff4081;
-      text-decoration: none;
+        color: #ff4081;
+        text-decoration: none;
     }
+
     .tag {
-      display: inline-block;
-      background: #ff4081;
-      color: #000;
-      padding: 0.2rem 0.5rem;
-      border-radius: 8px;
-      font-size: 0.6rem;
-      margin: 0.2rem;
+        display: inline-block;
+        background: #ff4081;
+        color: black;
+        padding: .2rem .5rem;
+        border-radius: 8px;
+        font-size: .6rem;
+        margin: .2rem;
     }
-  </style>
+
+    .skills {
+        font-size: .7rem;
+        line-height: 1.8;
+    }
+</style>
+```
+
 </head>
+
 <body>
-  <header>
+
+```
+<header>
     <img src="/assets/images/osama.jpg" alt="Ahmed Osama">
+
     <h1>Ahmed Osama</h1>
-    <p class="bio">Indie Game Developer | AR/VR Enthusiast | C++/Unity/Unreal/Godot</p>
-    <p>
-      <a href="mailto:ahmedosamam.negm@gmail.com">Email</a> |
-      <a href="https://github.com/AhmedONegm">GitHub</a> |
-      <a href="/blog">Blog</a>
-    </p>
-  </header>
 
-  <section class="section">
+    <p class="bio">
+        Indie Game Developer | AR/VR Enthusiast | Unity / Unreal / Godot
+    </p>
+
+    <p>
+        <a href="mailto:ahmedosamam.negm@gmail.com">Email</a> |
+        <a href="https://github.com/AhmedONegm">GitHub</a> |
+        <a href="/blog">Blog</a>
+    </p>
+</header>
+
+<!-- Project Gallery -->
+
+<section class="section">
+
     <h2>🎬 Project Gallery</h2>
+
     <div class="gallery">
-      <video src="assets/videos/vr-car.mp4" autoplay loop muted></video>
-      <img src="assets/images/bakkar.jpg" alt="2D Platformer">
-      <img src="assets/images/hero-vs-aliens.jpg" alt="Side-Scrolling Shooter Game">
-    </div>
-  </section>
 
-  <section class="section">
+        <video src="assets/videos/vr-car.mp4" autoplay loop muted controls></video>
+
+        <video src="assets/videos/ar-demo.mp4" autoplay loop muted controls></video>
+
+        <img src="assets/images/bakkar.jpg" alt="Bakkar Game">
+
+        <img src="assets/images/hero-vs-aliens.jpg" alt="Hero vs Aliens">
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+
+<section class="section">
+
     <h2>🕹️ Projects</h2>
-    <div class="card">
-      <h3>Luxoft VR Automotive Project</h3>
-      <p>Immersive VR modules to inspect & customize cars. Real-time feature customization using modular systems.</p>
-      <div class="tag">Unity</div>
-      <div class="tag">VR</div>
-      <div class="tag">XR</div>
-    </div>
-    <div class="card">
-      <h3>2D Platformer (Bakkar)</h3>
-      <p>Classic Egyptian adventure platformer. Built with Unity, featuring level design, scripting, and animation.</p>
-      <div class="tag">Unity</div>
-      <div class="tag">Platformer</div>
-    </div>
-    <div class="card">
-      <h3>MoonKnight Shooter</h3>
-      <p>3D Unreal Engine game using Blueprints & C++ where the knight shoots enemies using magical abilities.</p>
-      <div class="tag">Unreal</div>
-      <div class="tag">Blueprints</div>
-      <div class="tag">C++</div>
-    </div>
-    <div class="card">
-      <h3>AR Game using Vuforia</h3>
-      <p>Augmented reality experience integrating Vuforia for dynamic 3D content over real-world markers.</p>
-      <div class="tag">AR</div>
-      <div class="tag">Unreal</div>
-    </div>
-  </section>
 
-  <section class="section">
+    <div class="card">
+
+        <h3>Luxoft VR Automotive Project</h3>
+
+        <video src="assets/videos/vr-car.mp4" controls loop></video>
+
+        <p>
+            Immersive VR system allowing users to inspect and customize
+            vehicles in real time using modular VR interaction systems.
+        </p>
+
+        <div class="tag">Unity</div>
+        <div class="tag">VR</div>
+        <div class="tag">XR</div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>2D Platformer (Bakkar)</h3>
+
+        <img src="assets/images/bakkar.jpg" width="100%" alt="Bakkar Platformer">
+
+        <p>
+            Classic Egyptian adventure platformer built with Unity,
+            featuring animations, level design and scripted events.
+        </p>
+
+        <div class="tag">Unity</div>
+        <div class="tag">Platformer</div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>MoonKnight Shooter</h3>
+
+        <img src="assets/images/hero-vs-aliens.jpg" width="100%" alt="MoonKnight Shooter">
+
+        <p>
+            3D Unreal Engine shooter using Blueprints and C++
+            where a magical knight fights waves of enemies.
+        </p>
+
+        <div class="tag">Unreal</div>
+        <div class="tag">Blueprints</div>
+        <div class="tag">C++</div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>AR Game using Vuforia</h3>
+
+        <video src="assets/videos/ar-demo.mp4" controls loop></video>
+
+        <p>
+            Augmented reality experience built with Vuforia that
+            spawns 3D content over real world markers.
+        </p>
+
+        <div class="tag">AR</div>
+        <div class="tag">Unreal</div>
+
+    </div>
+
+</section>
+
+<!-- Experience -->
+
+<section class="section">
+
     <h2>🎮 Experience</h2>
+
     <div class="card">
-      <h3>iSchool Inc — Coding Instructor (2023 - Present)</h3>
-      <p>Taught and developed 2D games with Godot: side-scrollers, endless runners, AI, and animation systems.</p>
-      <div class="tag">Godot</div>
-      <div class="tag">Game Design</div>
-      <div class="tag">Education</div>
+
+        <h3>iSchool Inc — Coding Instructor (2023 - Present)</h3>
+
+        <p>
+            Teaching students game development with Godot including
+            side-scrollers, endless runners, enemy AI systems
+            and animation pipelines.
+        </p>
+
+        <div class="tag">Godot</div>
+        <div class="tag">Game Design</div>
+        <div class="tag">Education</div>
+
     </div>
-  </section>
 
-  <section class="section">
+</section>
+
+<!-- Skills -->
+
+<section class="section">
+
     <h2>🎓 Skills</h2>
-    <p>
-      Unity • Unreal Engine • Godot • C++ • C# • Game AI • Netcode • VR/AR/XR • Animation • Narrative Design
+
+    <p class="skills">
+        Unity • Unreal Engine • Godot • C++ • C# • Game AI • Netcode •
+        VR/AR/XR • Animation • Narrative Design
     </p>
-  </section>
 
-  <section class="section">
+</section>
+
+<!-- Blog -->
+
+<section class="section">
+
     <h2>📝 Latest Blog Posts</h2>
-    <ul>
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <small> - {{ post.date | date: "%B %d, %Y" }}</small>
-        </li>
-      {% endfor %}
-    </ul>
-    <p><a href="/blog">Read all posts →</a></p>
-  </section>
 
-  <footer>
-    &copy; Ahmed Osama 2025 | Built with ❤️ for games | Powered by Jekyll
-  </footer>
+    <ul>
+```
+
+{% raw %}
+{% for post in site.posts limit:3 %} <li> <a href="{{ post.url }}">{{ post.title }}</a> <small> - {{ post.date | date: "%B %d, %Y" }}</small> </li>
+{% endfor %}
+{% endraw %}
+
+```
+    </ul>
+
+    <p>
+        <a href="/blog">Read all posts →</a>
+    </p>
+
+</section>
+
+<footer>
+    © Ahmed Osama 2025  
+    Built with ❤️ for games  
+    Powered by Jekyll
+</footer>
+```
+
 </body>
+
 </html>
